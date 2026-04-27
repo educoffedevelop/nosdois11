@@ -1,0 +1,76 @@
+export default function HannaLoveSite() { const photos = [ { src: "/mnt/data/file_00000000f79071f591f30a82acf90ff4", caption: "Seu olhar tem a calma que meu coração sempre procurou.", }, { src: "/mnt/data/file_000000004200720ead7a491ad8adb871", caption: "Seu sorriso tem o tipo de luz que melhora qualquer dia.", }, { src: "/mnt/data/file_00000000e76c71f5b99cc1e260aaedc0", caption: "Em cada detalhe seu, eu encontro um motivo a mais pra te admirar.", }, { src: "/mnt/data/file_000000006da471f5ab784566e947550a", caption: "Desde 11 de novembro, tudo em mim aprendeu a gostar mais da vida.", }, ];
+
+return ( <div className="min-h-screen bg-gradient-to-b from-rose-50 via-pink-50 to-white text-zinc-800 overflow-hidden"> <section className="relative min-h-screen flex items-center justify-center px-6 text-center"> <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top,_#f9a8d4,_transparent_40%)]" />
+
+<div className="relative max-w-4xl mx-auto">
+      <p className="tracking-[0.35em] uppercase text-rose-400 text-sm mb-6">11 de novembro</p>
+      <h1 className="text-5xl md:text-7xl font-serif text-rose-700 leading-tight">
+        Hanna,
+        <span className="block text-zinc-800 mt-2">você é a parte mais bonita da minha história.</span>
+      </h1>
+      <p className="mt-8 text-lg md:text-2xl text-zinc-600 leading-relaxed max-w-3xl mx-auto">
+        Algumas pessoas passam pela nossa vida. Outras mudam tudo. Você foi o momento em que meu coração entendeu,
+        sem medo nenhum, o que é amar de verdade.
+      </p>
+    </div>
+  </section>
+
+  <section className="px-6 py-20">
+    <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
+      <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-rose-100">
+        <h2 className="text-3xl font-serif text-rose-700 mb-4">Desde que te conheci</h2>
+        <p className="text-zinc-600 leading-relaxed text-lg">
+          Desde o dia 11 de novembro, o tempo ganhou outro significado. Tudo ficou mais leve, mais bonito, mais vivo.
+          Seu jeito, seu sorriso, sua presença... tudo em você faz meu mundo parecer exatamente onde eu deveria estar.
+        </p>
+      </div>
+
+      <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-rose-100">
+        <h2 className="text-3xl font-serif text-rose-700 mb-4">Pra você</h2>
+        <p className="text-zinc-600 leading-relaxed text-lg">
+          Esse pequeno espaço é só uma forma de te lembrar que, entre todas as coincidências da vida,
+          você foi a mais linda que me aconteceu. E se eu pudesse escolher de novo, ainda escolheria você.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section className="px-6 py-20 bg-white/70">
+    <div className="max-w-6xl mx-auto">
+      <div className="text-center mb-14">
+        <h2 className="text-4xl md:text-5xl font-serif text-rose-700">Minha galeria favorita</h2>
+        <p className="text-zinc-500 mt-4 text-lg">Cada foto sua guarda um motivo novo pra eu me apaixonar.</p>
+      </div>
+
+      <div className="grid md:grid-cols-2 gap-8">
+        {photos.map((photo, index) => (
+          <div key={index} className="bg-white rounded-3xl overflow-hidden shadow-xl border border-rose-100">
+            <img src={photo.src} alt={`Hanna ${index + 1}`} className="w-full h-[480px] object-cover" />
+            <div className="p-6">
+              <p className="text-zinc-600 text-lg leading-relaxed">{photo.caption}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section className="px-6 py-24 text-center">
+    <div className="max-w-4xl mx-auto">
+      <h2 className="text-4xl md:text-6xl font-serif text-rose-700 leading-tight">
+        Se amar você é destino,
+        <span className="block text-zinc-800">então eu tive sorte de encontrar o meu.</span>
+      </h2>
+      <p className="mt-8 text-xl text-zinc-600 leading-relaxed">
+        Obrigado por existir do jeito que você existe. Por ser luz, carinho, beleza e paz.
+        Você é, sem esforço nenhum, uma das coisas mais lindas que a vida já me deu.
+      </p>
+    </div>
+  </section>
+
+  <footer className="px-6 py-10 text-center text-zinc-500 text-sm">
+    Feito por amor da sua vida.
+  </footer>
+</div>
+
+); }
